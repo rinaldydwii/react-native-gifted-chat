@@ -47,6 +47,7 @@ export default class Composer extends React.Component {
         enablesReturnKeyAutomatically
         underlineColorAndroid="transparent"
         keyboardAppearance={this.props.keyboardAppearance}
+        onSubmitEditing={() => this.props.onSend({ text: this.props.text.trim() }, true)}
         {...this.props.textInputProps}
       />
     );
